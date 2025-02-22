@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 65px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: -100px;
+}
+
+.logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 128, 0);
+    margin-left: -75px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.logo img {
+    width: 350px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: rgb(0, 128, 0);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-logo {
+    width: 25vw;
+    margin-left: -75vw;
+    margin-top: -20vh;
+
+}
+
+.hero, .about-me, .get-involved, .current-projects, .contact {
+    height: 100vh;
+    width: calc(100vw - 17px);  /* Subtract scrollbar width */
+    margin-left: -20px;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Background images for each section */
+.hero {
+    margin-top: 0;
+    background: url('images/Flag.png') no-repeat center center/cover;
+    background-size: cover;  /* Ensures the image always covers the element */
+    background-position: center 50%;  /* Horizontally center, vertically set to 50% */
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    object-fit: cover;  /* Prevents stretching if the aspect ratio changes */
+}
+
+.about-me {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+}
+
+.get-involved {
+    background: url('images/get-involved.jpg') no-repeat center center/cover;
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+}
+
+.current-projects {
+    background: url('images/current-projects.jpg') no-repeat center center/cover;
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+}
+
+.contact {
+    background: url('images/contact.jpg') no-repeat center center/cover;
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+    margin-bottom: -30px;
+}
+
+/* Adjust the content box */
+.get-involved-content, .current-projects-content, .contact-content {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.about-me h1, .get-involved h1, .current-projects h1, .contact h1 {
+    font-size: 36px;
+    color: #4CAF50;
+}
+
+.get-involved p, .current-projects p, .contact p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h1 {
+    color: #4CAF50;
+}
