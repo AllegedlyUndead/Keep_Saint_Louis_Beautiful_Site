@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Header Example</title>
+    <title>Keep Saint Louis Beautiful</title>
+    <link rel="icon" href="images/title_logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
             <div class="logo">
-                <!-- Wrap the logo in an anchor tag that links to the hero section -->
-                <a href="">
+                <a href="#hero">
                     <img src="images/header_logo.png" alt="Logo" />
                 </a>
             </div>
@@ -28,13 +28,23 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <img src="images/badge_logo.png" alt="Logo" class="hero-logo" />
+
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <img src="images/badge_logo.png" alt="Logo" class="hero-logo" />
+            </div>
+            <div class="hero-right">
+                <div class="hero-text">
+                    <h1>Cleaning Up Saint Louis Streets</h1>
+                    <p>Our streets deserve to be clean and beautiful. Join us in our mission to remove litter, restore pride in our community, and create a healthier environment for everyone. Together, we can make a difference—one street at a time!</p>
+                </div>
+            </div>
         </div>
     </section>
+
     <main>
-        <section id="about-me" class="about-me">
+        <section id="about" class="about">
             <div class="about-content">
                 <h1>About Me</h1>
                 <p>
@@ -44,18 +54,21 @@
                 </p>
             </div>
         </section>        
+
         <section id="get-involved" class="get-involved">
             <div class="get-involved-content">
                 <h1>Get Involved</h1>
                 <p>Information on how to get involved with our projects and make a difference!</p>
             </div>
         </section>
+
         <section id="current-projects" class="current-projects">
             <div class="current-projects-content">
                 <h1>Current Projects</h1>
                 <p>Details about ongoing projects and ways you can participate.</p>
             </div>
         </section>
+
         <section id="contact" class="contact">
             <div class="contact-content">
                 <h1>Contact Us</h1>
@@ -63,5 +76,11 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>Follow us on social media:</p>
+        <a href="https://facebook.com/KeepSaintLouisBeautiful" target="_blank">Facebook</a> |
+        <a href="https://twitter.com/KeepSaintLouisBeautiful" target="_blank">Twitter</a>
+    </footer>
 </body>
 </html>
