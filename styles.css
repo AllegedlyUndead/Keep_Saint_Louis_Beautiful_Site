@@ -66,11 +66,11 @@ nav a:hover {
 
 /* Hero Section Styles */
 .hero {
-    padding-top: 4rem; /* Adds space for the header */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 50px;
     background-color: #264653;
     color: white;
     height: 100vh;
@@ -87,7 +87,6 @@ nav a:hover {
     max-width: 25vw;
     height: auto;
     margin-bottom: 20px; /* Space between image and text */
-    z-index: 2; /* Make sure the logo stays above other content */
 }
 
 .hero-text h1 {
