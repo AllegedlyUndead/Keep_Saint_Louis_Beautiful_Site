@@ -1,20 +1,30 @@
-body {
+/* General Styles */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* To prevent horizontal scrolling if sections overflow */
+}
+
+/* Header Styles */
 header {
-    position: sticky;
-    top: 0;
-    background: white;
-    color: red;
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Ensures the header stays at the top of the viewport */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 65px;
+    background-color: #2a9d8f;
+    padding: 20px;
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+    width: 100%; /* Ensures the header takes the full width of the viewport */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow under the sticky header for better visibility */
+    height: 4rem;
 }
 
 .logo-container {
@@ -22,139 +32,154 @@ header {
     align-items: center;
 }
 
-.logo {
-    margin-left: -100px;
+.logo img {
+    width: 21.875rem;
+    margin-left: -6.25rem;
+    margin-top: 0.625rem;
 }
 
 .logo-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
-    color: rgb(0, 128, 0);
+    color: white;
     margin-left: -75px;
-    text-align: center;
-    line-height: 1.4;
-}
-
-.logo img {
-    width: 350px;
-    height: auto;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    list-style-type: none;
 }
 
-nav ul li {
-    margin-left: 30px;
+nav li {
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: rgb(0, 128, 0);
+nav a {
+    color: white;
     text-decoration: none;
-    padding: 10px;
-    font-size: 22px;
-    transition: color 0.3s;
+    font-size: 1rem;
 }
 
-nav ul li a:hover {
+nav a:hover {
     text-decoration: underline;
-    color: darkgreen;
 }
 
-.hero-content {
-    max-width: 600px;
+/* Hero Section Styles */
+.hero {
+    padding-top: 4rem; /* Adds space for the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #264653;
+    color: white;
+    height: 100vh;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column; /* Stacks the image and text vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-logo {
-    width: 25vw;
-    margin-left: -75vw;
-    margin-top: -20vh;
-
+    max-width: 25vw;
+    height: auto;
+    margin-bottom: 20px; /* Space between image and text */
+    z-index: 2; /* Make sure the logo stays above other content */
 }
 
-.hero, .about-me, .get-involved, .current-projects, .contact {
-    height: 100vh;
-    width: calc(100vw - 17px);  /* Subtract scrollbar width */
-    margin-left: -20px;
-    margin-top: -40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-text h1 {
+    font-size: 2.5rem;
     text-align: center;
-    position: relative;
 }
 
-/* Background images for each section */
-.hero {
-    margin-top: 0;
-    background: url('images/Flag.png') no-repeat center center/cover;
-    background-size: cover;  /* Ensures the image always covers the element */
-    background-position: center 50%;  /* Horizontally center, vertically set to 50% */
-    background-attachment: fixed; /* Keeps the background fixed during scroll */
-    height: 100vh; /* Full height of the viewport */
-    width: 100vw; /* Full width of the viewport */
-    object-fit: cover;  /* Prevents stretching if the aspect ratio changes */
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: center;
 }
 
-.about-me {
-    background: url('images/hero.jpg') no-repeat center center/cover;
-    background-size: cover; /* Ensures the background covers the section */
-    background-position: center center; /* Centers the image */
-    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+/* Section Styles for About, Get Involved, Current Projects, and Contact */
+.about {
+    padding: 50px;
+    background-color: #A8DADC; /* Light green */
+    text-align: center;
+    height: 100vh; /* Full viewport height */
 }
 
 .get-involved {
-    background: url('images/get-involved.jpg') no-repeat center center/cover;
-    background-size: cover; /* Ensures the background covers the section */
-    background-position: center center; /* Centers the image */
-    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+    padding: 50px;
+    background-color: #FFB74D; /* Warm orange */
+    text-align: center;
+    height: 100vh;
 }
 
 .current-projects {
-    background: url('images/current-projects.jpg') no-repeat center center/cover;
-    background-size: cover; /* Ensures the background covers the section */
-    background-position: center center; /* Centers the image */
-    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
+    padding: 50px;
+    background-color: #457B9D; /* Muted teal */
+    text-align: center;
+    height: 100vh; /* Full viewport height */
 }
 
 .contact {
-    background: url('images/contact.jpg') no-repeat center center/cover;
-    background-size: cover; /* Ensures the background covers the section */
-    background-position: center center; /* Centers the image */
-    background-attachment: fixed; /* Makes the background fixed while scrolling (optional) */
-    margin-bottom: -30px;
+    padding: 50px;
+    background-color: #F4A261; /* Coral */
+    text-align: center;
+    height: 100vh; /* Full viewport height */
 }
 
-/* Adjust the content box */
-.get-involved-content, .current-projects-content, .contact-content {
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+/* Section Content Styles */
+.about-content h1, .get-involved-content h1, .current-projects-content h1, .contact-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #2a9d8f;
     color: white;
-}
-
-.about-me h1, .get-involved h1, .current-projects h1, .contact h1 {
-    font-size: 36px;
-    color: #4CAF50;
-}
-
-.get-involved p, .current-projects p, .contact p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-main {
     padding: 20px;
 }
 
-section {
-    margin: 20px 0;
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-h1 {
-    color: #4CAF50;
+footer a:hover {
+    text-decoration: underline;
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
