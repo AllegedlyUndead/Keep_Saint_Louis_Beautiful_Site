@@ -14,3 +14,4 @@ Finish the how you can help page buttons. Currently only one does anything.
 
 Move everything below how you can help to it's own section that isn't the home page.
 
+Mobile friendly layout
