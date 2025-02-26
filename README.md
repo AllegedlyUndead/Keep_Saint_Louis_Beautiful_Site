@@ -1,4 +1,4 @@
-This is a demo for a website I'm using to learn html ands CSS
+This is a demo for a website I'm using to learn html and CSS
 
 To Do List:
 
