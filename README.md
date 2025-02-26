@@ -4,7 +4,7 @@ To Do List:
 
 Change Get involved to Volunteer
 
-Change Current Projects to Upcoming Cleanups
+Change Current Projects to Upcoming Events
 
 Add a donte button and page that includes the amazon shopping list
 
