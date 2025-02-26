@@ -34,15 +34,8 @@ header {
 
 .logo img {
     width: 21.875rem;
-    margin-left: -6.25rem;
+    margin-left: -50px;
     margin-top: 0.625rem;
-}
-
-.logo-text {
-    font-size: 0.875rem;
-    font-weight: bold;
-    color: white;
-    margin-left: -75px;
 }
 
 nav ul {
@@ -52,6 +45,7 @@ nav ul {
 
 nav li {
     margin: 0 15px;
+    padding: 15px;
 }
 
 nav a {
@@ -67,80 +61,319 @@ nav a:hover {
 /* Hero Section Styles */
 .hero {
     display: flex;
-    flex-direction: column; /* Stacks content vertically */
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
     padding: 50px;
-    background-color: #264653;
+    background: url('images/hero.jpeg') no-repeat center center;
+    background-size: cover;
     color: white;
     height: 100vh;
+    width: 100%;
 }
 
 .hero-container {
     display: flex;
-    flex-direction: column; /* Stacks the image and text vertically */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
-.hero-logo {
-    max-width: 25vw;
-    height: auto;
-    margin-bottom: 20px; /* Space between image and text */
+.hero-text {
+    max-width: 600px;
+    margin-top: -200px;
+    margin-left: 70px;
 }
 
 .hero-text h1 {
     font-size: 2.5rem;
-    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
 }
 
 .hero-text p {
     font-size: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    color: black;
+}
+
+/* Hero Button */
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #2a9d8f;
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #e69a36;
+}
+
+/* Our Mission Section Styling */
+.our-mission {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    padding: 50px;
+    background-color: #EEE7D7; /* Warm orange */
+    height: 50vh; /* Full viewport height */
+    width: 100%;
+}
+
+.mission-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mission-logo {
+    position: absolute; /* Allows the logo to be freely moved */
+    top: -10%; /* Adjust this value to position the logo vertically */
+    left: 15%; /* Adjust this value to position the logo horizontally */
+    width: 25vw; /* Adjust the width of the logo */
+    height: auto;
+}
+
+.mission-text {
+    position: absolute; /* Allows text to be freely moved */
+    top: 5%; /* Adjust this value to position the text vertically */
+    left: 40%; /* Adjust this value to position the text horizontally */
     max-width: 600px;
+    text-align: left; /* Left align the text */
+}
+
+.mission-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
-/* Section Styles for About, Get Involved, Current Projects, and Contact */
-.about {
+.mission-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Mission Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #2a9d8f; /* Choose a color that stands out */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 30%;
+}
+
+.cta-button:hover {
+    background-color: #1e7f6a; /* Darker shade for hover effect */
+}
+
+/* How You Can Help Section */
+.how-you-can-help {
     padding: 50px;
     background-color: #A8DADC; /* Light green */
     text-align: center;
+}
+
+.how-help-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.how-help-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem; /* Centers text and adds spacing */
+    line-height: 1.6;
+}
+
+/* Cards Container */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards instead of spacing them out */
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #FF7043; /* Volunteer card color */
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #E68930; /* Darker shade for hover */
+}
+
+.card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Overlay Styles */
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* Text and Arrow */
+.card .card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.card p {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card .arrow {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+}
+
+/* Specific Card Colors */
+.card.volunteer {
+    background-color: #FF7043; /* Volunteer button color */
+    border-radius: 50px 0 50px 0; /* Top-left straight, others rounded */
+}
+
+.card.spread-the-word {
+    background-color: #FFEB3B; /* Spread the Word button color */
+    border-radius: 50px 0 50px 0; /* Top-left straight, others rounded */
+}
+
+.card.donate {
+    background-color: #388E3C; /* Donate button color */
+    border-radius: 50px 0 50px 0; /* Top-left straight, others rounded */
+}
+
+/* Arrow Icon Styles */
+.arrow {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50px 50px 50px 0;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent */
+    color: black;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Different Colors for Each Section */
+.educate .arrow {
+    background: rgba(0, 100, 0, 0.7); /* Dark green */
+    color: white;
+}
+
+.volunteer .arrow {
+    background: rgba(150, 200, 0, 0.7); /* Light yellow-green */
+    color: black;
+}
+
+.donate .arrow {
+    background: rgba(0, 150, 255, 0.7); /* Blue */
+    color: white;
+}
+
+
+/* About Section Styling */
+.about {
+    position: relative; /* Allows absolute positioning of child elements */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    padding: 50px;
+    background: url(images/about.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
     height: 100vh; /* Full viewport height */
+    width: 100%;
+}
+
+.about-content {
+    position: relative;
+    max-width: 800px; /* Limits text width for readability */
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto; /* Centers text block */
 }
 
 .get-involved {
-    padding: 50px;
-    background-color: #FFB74D; /* Warm orange */
-    text-align: center;
-    height: 100vh;
-}
-
-.current-projects {
-    padding: 50px;
-    background-color: #457B9D; /* Muted teal */
-    text-align: center;
-    height: 100vh; /* Full viewport height */
-}
-
-.contact {
-    padding: 50px;
-    background-color: #F4A261; /* Coral */
-    text-align: center;
-    height: 100vh; /* Full viewport height */
-}
-
-/* Section Content Styles */
-.about-content h1, .get-involved-content h1, .current-projects-content h1, .contact-content h1 {
-    font-size: 2rem;
-    margin-bottom: 1em;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    background-color: #2a9d8f;
+    background-color: #FFB74D;
     color: white;
     padding: 20px;
+    text-align: center;
+}
+
+/* Footer Section Styling */
+footer {
+    background-color: #2a9d8f;
+    padding: 20px;
+    text-align: center;
 }
 
 footer a {
@@ -153,31 +386,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .hero-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-        text-align: center;
-    }
+footer p {
+    color: white;
+    margin-top: 20px;
 }
